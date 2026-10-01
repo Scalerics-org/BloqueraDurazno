@@ -45,15 +45,21 @@ export default function Footer() {
             </a>
           </div>
           <p>© {new Date().getFullYear()} — Todos los derechos reservados</p>
-          <p className="text-xs opacity-50">
-            Diseño web por{" "}
+          <p className="text-xs flex items-center justify-center gap-2">
+            <span className="opacity-50">Diseño web por</span>
             <a
               href="https://www.scalerics.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80 underline underline-offset-2 focus-visible:ring-2 focus-visible:ring-cream focus-visible:outline-none rounded-sm"
+              className="opacity-70 hover:opacity-100 transition-opacity focus-visible:ring-2 focus-visible:ring-cream focus-visible:outline-none rounded-sm"
             >
-              Scalerics
+              <Image
+                src="/images/scalerics.png"
+                alt="Scalerics"
+                width={400}
+                height={79}
+                className="h-4 w-auto"
+              />
             </a>
           </p>
         </div>
