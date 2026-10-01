@@ -34,8 +34,9 @@ Landing page para Bloquera La Cadena, empresa fundada por José Ávila en Paso l
 
 ### `components/Catalog.tsx` y `components/ProductCard.tsx`
 - Confirmar que todas las cards muestren su imagen real (ya están en `data/site.ts`)
-- Productos `featured: true` reciben etiqueta visual destacada
-- Productos sin precio (`null`) muestran botón "Consultar por WhatsApp" directo
+- Productos `featured: true` reciben etiqueta visual destacada (ya existe, verificar que se vea bien)
+- Productos sin precio (`null`) muestran botón "Consultar por WhatsApp" directo (ya existe)
+- **Bug fix**: el CTA final del catálogo tiene `https://wa.me/59899000000` hardcodeado — reemplazar por `waLink()` usando `SITE.whatsapp`
 
 ### `components/Delivery.tsx`
 - Titular actualizado: `"Llegamos a pie de obra"`
