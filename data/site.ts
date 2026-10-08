@@ -15,6 +15,26 @@ export const SITE = {
   facebook: "https://www.facebook.com/p/Bloquera-La-Cadena-61575834790786/",
   instagram: "https://www.instagram.com/bloqueralacadena",
   zone: "Durazno ciudad y zona rural",
+
+  // ── Datos legales ────────────────────────────────────────────────────────
+  // El sitio publica precios, y la Ley 17.250 pide que el precio que ve el
+  // consumidor sea el final, en pesos y CON impuestos incluidos, y que se pueda
+  // identificar a quién le está comprando.
+  //
+  // Mientras estén vacíos, el pie y el catálogo no muestran nada: es preferible
+  // no decir nada a afirmar algo falso sobre impuestos.
+  legal: {
+    razonSocial: "",            // nombre legal de la empresa
+    rut: "",                    // obligatorio para identificar al proveedor
+    // true  -> "Precios con IVA incluido"
+    // false -> "Precios más IVA"      (ojo: publicar precios sin impuestos
+    //                                  incluidos es justo lo que la ley no
+    //                                  quiere; si es false, hay que mostrar
+    //                                  también el precio final)
+    // null  -> no se dice nada todavía
+    ivaIncluido: null as boolean | null,
+    preciosDesde: "",           // ej. "octubre de 2026"
+  },
 };
 
 export type Product = {

@@ -18,6 +18,13 @@ export default function Footer() {
         <div className="text-center space-y-1">
           <p>{SITE.address}</p>
           <p className="text-xs opacity-60">Fundada por José Ávila</p>
+          {/* Identificación del proveedor: la Ley 17.250 pide poder saber a
+              quién le estás comprando. Sale sólo si está cargado. */}
+          {SITE.legal.razonSocial && SITE.legal.rut && (
+            <p className="text-xs opacity-60">
+              {SITE.legal.razonSocial} · RUT {SITE.legal.rut}
+            </p>
+          )}
         </div>
         <div className="text-center space-y-2">
           <div className="flex items-center justify-center gap-4">
